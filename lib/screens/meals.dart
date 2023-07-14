@@ -14,7 +14,7 @@ class MealsScreen extends StatelessWidget {
     if (meals.isEmpty) {
       content = const Center(
         child: Center(
-          child: Text('OOps,No Items Here',style: TextStyle(color: Colors.white),),
+          child: Text('OOps,No Items Here',style: TextStyle(color: Color.fromARGB(255, 5, 2, 2)),),
         ),
       );
     }
