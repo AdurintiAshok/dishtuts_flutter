@@ -31,7 +31,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> with SingleTickerPr
   void  selectScreen(BuildContext context,CategoryDataModel categoryDataModel)
   {
     final filteredMeals=widget.availableMeals.where((meal) =>meal.categories.contains(categoryDataModel.id)).toList();
-    Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>MealsScreen(title:categoryDataModel.title, meals:filteredMeals)));
+    Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>MealsScreen(title:categoryDataModel.title, meals:filteredMeals,active:false)));
     
   }
 

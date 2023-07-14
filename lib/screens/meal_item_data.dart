@@ -5,7 +5,6 @@ import 'package:meals/provider/favorite_provider.dart';
 
 class MealItemData extends ConsumerWidget {
   const MealItemData({super.key, required this.meals});
-  // final void Function(Meal meal) favouriteMeal;
   final Meal meals;
   @override
   Widget build(BuildContext context, WidgetRef ref) {

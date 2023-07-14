@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:meals/provider/favorite_provider.dart';
-import 'package:meals/provider/meal_provider.dart';
 import 'package:meals/screens/filters.dart';
 import 'package:meals/screens/meals.dart';
 
@@ -19,16 +18,7 @@ class TabsScreen extends ConsumerStatefulWidget {
 class _TabsScreenState extends ConsumerState<TabsScreen> {
   int _index = 0;
 
-  void _showMessage(String message) {
-    ScaffoldMessenger.of(context).clearSnackBars();
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(
-        message,
-        selectionColor: Colors.black,
-      ),
-      duration: Duration(seconds: 2),
-    ));
-  }
+
 
   // final List<Meal> favouritemeals = [];
   void _selectedPage(int index) {
@@ -52,12 +42,12 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     var activePageTitle = "Categories";
     if (_index == 1) {
       final favoritemeal = ref.watch(favoriteProvider);
-      activeScreen = MealsScreen(meals: favoritemeal);
+      activeScreen = MealsScreen(meals: favoritemeal,active:true);
       activePageTitle = "Your Favourites";
     }
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 12, 14, 17),
+      backgroundColor:const  Color.fromARGB(255, 12, 14, 17),
       appBar: AppBar(
         title: Text(activePageTitle),
       ),

@@ -10,8 +10,8 @@ class MealTrait extends StatelessWidget {
     return Row(
       children: [
         Icon(icon,size:17,),
-        SizedBox(width:4,),
-        Text(duration,style: TextStyle(color: Colors.white),)
+        const SizedBox(width:4,),
+        Text(duration,style:const TextStyle(color: Colors.white),)
       ],
     );
   }
