@@ -57,7 +57,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     }
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 244, 241, 241),
+      backgroundColor: Color.fromARGB(255, 12, 14, 17),
       appBar: AppBar(
         title: Text(activePageTitle),
       ),

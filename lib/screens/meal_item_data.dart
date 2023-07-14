@@ -26,16 +26,25 @@ class MealItemData extends ConsumerWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           title: Text(meals.title),
-          actions: [IconButton(onPressed:makefavorite, icon:  Icon( mealIsExisted ? Icons.star : Icons.star_border))],
+          actions: [IconButton(onPressed:makefavorite, icon:  AnimatedSwitcher(
+            duration: const Duration(milliseconds: 300),
+            transitionBuilder: (child, animation) {
+              return RotationTransition(turns: Tween<double>(begin: 0.8,end: 1).animate(animation),child: child,);
+            },
+            child: Icon( mealIsExisted ? Icons.star : Icons.star_border,key: ValueKey(mealIsExisted),)))],
         ),
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Image.network(
-                meals.imageUrl,
-                height: 300,
-                width: double.infinity,
-                fit: BoxFit.cover,
+
+              Hero(
+                tag: meals.id,
+                child: Image.network(
+                  meals.imageUrl,
+                  height: 300,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
               ),
               const SizedBox(
                 height: 10,
