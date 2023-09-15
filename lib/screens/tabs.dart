@@ -9,8 +9,8 @@ import 'categories.dart';
 import 'mainDrawer.dart';
 
 class TabsScreen extends ConsumerStatefulWidget {
-  const TabsScreen({super.key});
-
+   TabsScreen({super.key,required this.useremail});
+  final String useremail;
   @override
   ConsumerState<TabsScreen> createState() => _TabsScreenState();
 }
@@ -51,7 +51,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
       appBar: AppBar(
         title: Text(activePageTitle),
       ),
-      drawer: MainDrawer(setScreen: _setScreen),
+      drawer: MainDrawer(setScreen: _setScreen,useremail:widget.useremail),
       body: activeScreen,
       bottomNavigationBar: BottomNavigationBar(
         items: const [

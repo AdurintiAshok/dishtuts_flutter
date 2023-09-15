@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1015251283250",
+    "firebase_url": "https://flutter-b391a-default-rtdb.firebaseio.com",
+    "project_id": "flutter-b391a",
+    "storage_bucket": "flutter-b391a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015251283250:android:95c774d15baa00ce46bb2b",
+        "android_client_info": {
+          "package_name": "com.example.meals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015251283250-7ggbjre3gn9e99bgk23744qhpfnnc7th.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFleeQ_CtEASYVwhFNLaaqxKwDY5Sr3uA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015251283250-7ggbjre3gn9e99bgk23744qhpfnnc7th.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class MainDrawer extends StatelessWidget {
-  const MainDrawer({super.key,required,required this.setScreen});
+    MainDrawer({super.key,required this.setScreen,required this.useremail});
   final void Function(String) setScreen;
+final String useremail;
 
   @override
   Widget build(BuildContext context) {
+    
     return  Drawer(
       child: 
       Column(
@@ -24,7 +26,8 @@ class MainDrawer extends StatelessWidget {
             children: [
               Icon(Icons.food_bank),
               SizedBox(width: 10,),
-              Text("Dish Tuts",style: TextStyle(color: Colors.white))
+              Text("DISH TUTS",style: TextStyle(color: Colors.white)),
+
             ],
           )),
           ListTile(
